@@ -7,3 +7,10 @@ para compilar typescript tsc nombre_archivo.ts
 para que un archivo ts vaya recompilando el js cada vez que se haga un cambio, se utiliza tsc watch nombre_archivo.ts
 para iniciar un proyecto typescript se usa tsc --init
 en la consola ejecutar http-server para levantar un servidor
+
+Para inicializar un proyecto en angular 2 
+git clone https://github.com/angular/quickstart.git 
+quickstart
+cd quickstart
+npm install
+npm start
