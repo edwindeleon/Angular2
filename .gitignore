@@ -38,7 +38,7 @@ $RECYCLE.BIN/
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-notas.txt
+
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -46,3 +46,4 @@ notas.txt
 Network Trash Folder
 Temporary Items
 .apdisk
+notas.txt
