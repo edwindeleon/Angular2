@@ -1,0 +1,14 @@
+[
+{
+		"id" : 1,
+		"name" : "Angular 2",
+		"image" : "/img/angular.png",
+		"price" : 1200
+	},
+	{
+		"id" : 2,
+		"name" : "Pyton",
+		"image" : "/img/python.png",
+		"price" : 1500
+	}
+]
