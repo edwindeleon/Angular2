@@ -18,3 +18,4 @@ import {CartService} from '../services/cart.services'
 })
 
 export class AppComponent{}
+//nota
