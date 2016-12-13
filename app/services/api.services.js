@@ -17,6 +17,18 @@ var ApiService = (function () {
     }
     ApiService.prototype.getCourses = function () {
         var url = '/data/info.json';
+        return this.http.get(url)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.error);
+    };
+    ApiService.prototype.getCoursesSlow = function () {
+        var _this = this;
+        return new Promise(function (resolve) { return setTimeout(resolve, 2000); })
+            .then(function () { return _this.getCourses(); });
+    };
+    ApiService.prototype.error = function (error) {
+        return Promise.reject(error.message || error);
     };
     ApiService = __decorate([
         core_1.Injectable(), 

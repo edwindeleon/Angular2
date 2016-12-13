@@ -1,21 +1,7 @@
-import {Component} from '@angular/core';
-
+import {Component, OnInit} from '@angular/core';
 import {Course} from '../common/course';
+import {ApiService} from '../services/api.services';
 
-const COURSES : Course[] =[
-{
-		id : 1,
-		name : 'Angular 2',
-		image : '/img/angular.png',
-		price : 1000
-	},
-	{
-		id : 2,
-		name : 'Pyton',
-		image : '/img/python.png',
-		price : 1500000
-	}
-]
 @Component({
 	selector: 'courses',
 	template:
@@ -28,9 +14,25 @@ const COURSES : Course[] =[
 			>
 			</coursebox>
 		</div>
-	`
+	`,
+	providers:[ApiService]
 })
-export class CoursesComponent{
+export class CoursesComponent implements OnInit{
 	title : string = 'cursos disponibles'
-	courses : Course [] = COURSES;
+	courses : Course [];
+
+	constructor(private ApiService : ApiService){
+
+	}
+
+	getCourses(){
+		this.ApiService.getCourses().then(
+			courses => this.courses = courses
+			)
+	}
+
+	ngOnInit(){
+		this.getCourses();
+
+	}
 }

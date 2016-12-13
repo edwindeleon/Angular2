@@ -9,31 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var COURSES = [
-    {
-        id: 1,
-        name: 'Angular 2',
-        image: '/img/angular.png',
-        price: 1000
-    },
-    {
-        id: 2,
-        name: 'Pyton',
-        image: '/img/python.png',
-        price: 1500000
-    }
-];
+var api_services_1 = require('../services/api.services');
 var CoursesComponent = (function () {
-    function CoursesComponent() {
+    function CoursesComponent(ApiService) {
+        this.ApiService = ApiService;
         this.title = 'cursos disponibles';
-        this.courses = COURSES;
     }
+    CoursesComponent.prototype.getCourses = function () {
+        var _this = this;
+        this.ApiService.getCourses().then(function (courses) { return _this.courses = courses; });
+    };
+    CoursesComponent.prototype.ngOnInit = function () {
+        this.getCourses();
+    };
     CoursesComponent = __decorate([
         core_1.Component({
             selector: 'courses',
-            template: "\n\t\t<h2>{{title}}</h2>\n\t\t<div class=\"courses_list\">\n\t\t\t<coursebox\n\t\t\t[course]=\"course_info\"\n\t\t\t*ngFor = \"let course_info of courses\"\n\t\t\t>\n\t\t\t</coursebox>\n\t\t</div>\n\t"
+            template: "\n\t\t<h2>{{title}}</h2>\n\t\t<div class=\"courses_list\">\n\t\t\t<coursebox\n\t\t\t[course]=\"course_info\"\n\t\t\t*ngFor = \"let course_info of courses\"\n\t\t\t>\n\t\t\t</coursebox>\n\t\t</div>\n\t",
+            providers: [api_services_1.ApiService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [api_services_1.ApiService])
     ], CoursesComponent);
     return CoursesComponent;
 }());

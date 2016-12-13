@@ -10,5 +10,11 @@
 		"name" : "Pyton",
 		"image" : "/img/python.png",
 		"price" : 1500
+	},
+	{
+		"id" : 3,
+		"name" : "Pyton 2",
+		"image" : "/img/python.png",
+		"price" : 2500
 	}
 ]
