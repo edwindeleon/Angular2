@@ -9,19 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var cart_services_1 = require('../services/cart.services');
-var AppComponent = (function () {
-    function AppComponent() {
+var WelcomeComponent = (function () {
+    function WelcomeComponent() {
     }
-    AppComponent = __decorate([
+    WelcomeComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n  \t<header>\n  \t\tCursos\n  \t</header>\n    <nav>\n    <a routerLink=\"\">Inicio</a>\n    <a routerLink=\"courses\">Cursos</a>\n    </nav>\n  \t<section>\n  \t\t<router-outlet></router-outlet>\n\n  \t</section>\n  ",
-            providers: [cart_services_1.CartService]
+            selector: 'welcome',
+            template: '<h2>Bienvenido a nuestra tienda</h2>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WelcomeComponent);
+    return WelcomeComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WelcomeComponent = WelcomeComponent;
+//# sourceMappingURL=welcome.component.js.map

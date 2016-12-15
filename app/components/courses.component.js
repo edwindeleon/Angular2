@@ -25,7 +25,7 @@ var CoursesComponent = (function () {
     CoursesComponent = __decorate([
         core_1.Component({
             selector: 'courses',
-            template: "\n\t\t<h2>{{title}}</h2>\n\t\t<div class=\"courses_list\">\n\t\t\t<coursebox\n\t\t\t[course]=\"course_info\"\n\t\t\t*ngFor = \"let course_info of courses\"\n\t\t\t>\n\t\t\t</coursebox>\n\t\t</div>\n\t",
+            template: "\n\t\t<h2>{{title}}</h2>\n\t\t<div class=\"courses_list\">\n\t\t\t<coursebox\n\t\t\t[course]=\"course_info\"\n\t\t\t*ngFor = \"let course_info of courses\"\n\t\t\t>\n\t\t\t</coursebox>\n\t\t</div>\n\t\t<cart></cart>\n\t",
             providers: [api_services_1.ApiService]
         }), 
         __metadata('design:paramtypes', [api_services_1.ApiService])

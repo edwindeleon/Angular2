@@ -21,6 +21,10 @@ export class ApiService{
 			resolve => setTimeout( resolve, 2000))
 			.then( ()=> this.getCourses() )
 	}
+	getCourse(id:number){
+		return this.getCourses()
+		.then(courses => courses.find( course => course.id==id ));
+	}
 
 	error(error:any){
 		return Promise.reject(error.message || error);

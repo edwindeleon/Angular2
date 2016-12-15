@@ -8,9 +8,12 @@ import {CartService} from '../services/cart.services'
   	<header>
   		Cursos
   	</header>
+    <nav>
+    <a routerLink="">Inicio</a>
+    <a routerLink="courses">Cursos</a>
+    </nav>
   	<section>
-  		<courses></courses>
-  		<cart></cart>
+  		<router-outlet></router-outlet>
 
   	</section>
   `,

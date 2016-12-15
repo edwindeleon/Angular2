@@ -14,6 +14,7 @@ import {ApiService} from '../services/api.services';
 			>
 			</coursebox>
 		</div>
+		<cart></cart>
 	`,
 	providers:[ApiService]
 })

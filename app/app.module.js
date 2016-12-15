@@ -12,9 +12,26 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./components/app.component');
+var router_1 = require('@angular/router');
 var courses_component_1 = require('./components/courses.component');
 var coursebox_component_1 = require('./components/coursebox.component');
 var cart_component_1 = require('./components/cart.component');
+var welcome_component_1 = require('./components/welcome.component');
+var details_component_1 = require('./components/details.component');
+var routes = [
+    {
+        path: '',
+        component: welcome_component_1.WelcomeComponent
+    },
+    {
+        path: 'courses',
+        component: courses_component_1.CoursesComponent
+    },
+    {
+        path: 'course/:id',
+        component: details_component_1.CourseDatail
+    }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,13 +39,16 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                http_1.HttpModule
+                http_1.HttpModule,
+                router_1.RouterModule.forRoot(routes)
             ],
             declarations: [
                 app_component_1.AppComponent,
                 courses_component_1.CoursesComponent,
                 coursebox_component_1.CourseBoxComponent,
-                cart_component_1.CartComponent
+                cart_component_1.CartComponent,
+                welcome_component_1.WelcomeComponent,
+                details_component_1.CourseDatail
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
@@ -38,4 +58,3 @@ var AppModule = (function () {
 }());
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
-//coment
